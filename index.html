@@ -3,52 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>bluxli0 — Personal Site</title>
-    <meta name="description" content="Personal site for bluxli0 — a starter template you can edit." />
+    <title>bluxli — interactive site</title>
+    <meta name="description" content="Personal interactive site for bluxli — advanced Three.js cube, mini-games, animations." />
     <link rel="stylesheet" href="styles.css">
-    <meta property="og:title" content="bluxli0 — Personal Site" />
-    <meta property="og:description" content="Personal site for bluxli0 — a starter template you can edit." />
+    <meta property="og:title" content="bluxli — interactive site" />
+    <meta property="og:description" content="Interactive Three.js experience & mini-games." />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/301450125?v=4" />
   </head>
   <body>
-    <main class="site">
-      <header class="hero">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/301450125?v=4" alt="bluxli0 avatar">
-        <h1>Hi — I'm <span class="name">bluxli0</span></h1>
-        <p class="tagline">Welcome to my personal website. This is a starter template — replace this text with your bio.</p>
-        <nav class="social">
-          <a href="https://github.com/bluxli0" target="_blank" rel="noopener">GitHub</a>
-        </nav>
+    <div id="ui">
+      <header class="topbar">
+        <div class="brand">bluxli</div>
+        <div class="controls">
+          <button id="startRotateMatch">Rotate Match</button>
+          <button id="spawnTargetCube">Spawn Target</button>
+          <button id="resetScene">Reset</button>
+        </div>
       </header>
 
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>Edit this section to tell people who you are, what you do, and what you care about. Example: I'm a developer who likes building web apps, experimenting with open source, and learning new languages.</p>
-      </section>
+      <aside class="panel">
+        <h3>Mini-games</h3>
+        <ol>
+          <li><strong>Collector</strong> — click glowing orbs to collect points.</li>
+          <li><strong>Rotate Match</strong> — rotate the cube to match the hidden target orientation.</li>
+          <li><strong>Shooting</strong> — click to shoot particles at the cube faces and change textures.</li>
+        </ol>
+        <div class="stats">
+          <div>Score: <span id="score">0</span></div>
+          <div id="gameHint">Tip: drag to rotate, click to interact.</div>
+        </div>
+      </aside>
+    </div>
 
-      <section id="projects" class="card">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>I-m-bluxli</strong> — This repository contains this website. Replace with your project list and links.</li>
-        </ul>
-      </section>
+    <main id="canvas-container"></main>
 
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>Email: <em>your-email@example.com</em> — replace with your preferred contact method.</p>
-      </section>
+    <footer class="footer">Made with Three.js • Your OC-inspired cube — <strong>bluxli</strong></footer>
 
-      <footer class="footer">
-        <small>Made with ❤️ — edit <code>index.html</code> and <code>styles.css</code> in this repo to customize.</small>
-      </footer>
-    </main>
-
-    <!--
-      How to customize this site:
-      - Edit index.html to change text, links, and sections.
-      - Replace the avatar URL with a local file in /assets/ and update the src if you add one.
-      - Edit styles.css to change colors and layout.
-      - To publish: Go to repo Settings → Pages and enable GitHub Pages on branch "main" (root).
-    -->
+    <script type="module" src="main.js"></script>
   </body>
 </html>

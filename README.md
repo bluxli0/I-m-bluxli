@@ -1,21 +1,19 @@
-# I-m-bluxli — Personal website
+# I-m-bluxli — Interactive Three.js site
 
-This repository now contains a small starter personal website (index.html + styles.css).
+This update makes the site highly interactive: it adds a procedurally-textured, UV-warped cube inspired by your OC, lots of animations, lighting, and three mini-games (Collector, Rotate Match, Shooting).
 
-How to use
+Files added/changed
+- index.html — UI and canvas container; buttons to start games
+- styles.css — layout and UI style tweaks
+- main.js — Three.js scene with materials, animations, interactions, and games
 
-- Edit index.html to change your name, bio, projects, and contact info.
-- Edit styles.css to adjust colors and layout.
-- Add images into an `assets/` folder and update <img> sources in index.html.
-- To publish the site using GitHub Pages:
-  1. Go to https://github.com/bluxli0/I-m-bluxli/settings/pages
-  2. Under "Build and deployment", select the branch `main` and the folder `/ (root)`.
-  3. Save — the site will be served at `https://bluxli0.github.io/I-m-bluxli/` (it can take a minute).
+Notes
+- The cube textures are generated procedurally in-browser using canvas; you don't need external image assets.
+- To publish, enable GitHub Pages on branch `main` (root). The site will use modern ES modules, so a modern browser is required.
 
-Want me to customize the content for you? Tell me:
-- Your full name or display name
-- A short bio (2–3 sentences)
-- Links to highlight (projects, social, blog)
-- Contact method (email, Twitter, etc.)
+Tell me what to personalize next
+- Do you want a specific color palette for your OC, or an uploaded image (avatar) to incorporate on a cube face?
+- Want additional games (memory match, platform-style mini-level) or sound effects (requires hosting or embed)?
+- Want a separate page for a full gallery or resume?
 
-I can update the site with that information and add extra pages or a projects section.
+If you say "Apply my OC avatar" provide a URL or upload the image and I will modify the face texture to include it.
