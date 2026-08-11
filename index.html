@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>bluxli — interactive site</title>
     <meta name="description" content="Personal interactive site for bluxli — advanced Three.js cube, mini-games, animations." />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta property="og:title" content="bluxli — interactive site" />
     <meta property="og:description" content="Interactive Three.js experience & mini-games." />
@@ -13,8 +14,12 @@
   <body>
     <div id="ui">
       <header class="topbar">
-        <div class="brand">bluxli</div>
+        <div class="brand">
+          <div class="avatar-bubble">._.</div>
+          <div class="display-name" id="display-name">bluxli</div>
+        </div>
         <div class="controls">
+          <button id="openSettings" title="Settings">⚙️</button>
           <button id="startRotateMatch">Rotate Match</button>
           <button id="spawnTargetCube">Spawn Target</button>
           <button id="resetScene">Reset</button>
@@ -23,11 +28,7 @@
 
       <aside class="panel">
         <h3>Mini-games</h3>
-        <ol>
-          <li><strong>Collector</strong> — click glowing orbs to collect points.</li>
-          <li><strong>Rotate Match</strong> — rotate the cube to match the hidden target orientation.</li>
-          <li><strong>Shooting</strong> — click to shoot particles at the cube faces and change textures.</li>
-        </ol>
+        <div class="games-list" id="gamesList"></div>
         <div class="stats">
           <div>Score: <span id="score">0</span></div>
           <div id="gameHint">Tip: drag to rotate, click to interact.</div>
@@ -37,7 +38,17 @@
 
     <main id="canvas-container"></main>
 
-    <footer class="footer">Made with Three.js • Your OC-inspired cube — <strong>bluxli</strong></footer>
+    <div id="settings" class="overlay hidden">
+      <h3>Settings</h3>
+      <label><input type="checkbox" id="toggleSound" checked> Sound (soft ambient)</label>
+      <label><input type="checkbox" id="toggleLDM"> Low Detail Mode (LDM)</label>
+      <label><input type="checkbox" id="toggleFullMobile" checked> Full Effects on Mobile</label>
+      <button id="resetScores">Reset High Scores</button>
+      <button id="closeSettings">Close</button>
+      <div class="small">LDM reduces particle count & detail for performance.</div>
+    </div>
+
+    <footer class="footer">Made with Three.js • Your OC-inspired gradient glass cube — <strong>bluxli</strong></footer>
 
     <script type="module" src="main.js"></script>
   </body>
