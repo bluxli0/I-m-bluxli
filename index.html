@@ -20,6 +20,8 @@
         </div>
         <div class="controls">
           <button id="openSettings" title="Settings">⚙️</button>
+          <button id="snapshotBtn" title="Download snapshot">📸</button>
+          <button id="wallpaperBtn" title="Download wallpaper">🖼️</button>
           <button id="startRotateMatch">Rotate Match</button>
           <button id="spawnTargetCube">Spawn Target</button>
           <button id="resetScene">Reset</button>
@@ -40,12 +42,12 @@
 
     <div id="settings" class="overlay hidden">
       <h3>Settings</h3>
-      <label><input type="checkbox" id="toggleSound" checked> Sound (soft ambient)</label>
+      <label><input type="checkbox" id="toggleSound"> Sound (soft ambient) — OFF for now</label>
       <label><input type="checkbox" id="toggleLDM"> Low Detail Mode (LDM)</label>
       <label><input type="checkbox" id="toggleFullMobile" checked> Full Effects on Mobile</label>
       <button id="resetScores">Reset High Scores</button>
       <button id="closeSettings">Close</button>
-      <div class="small">LDM reduces particle count & detail for performance.</div>
+      <div class="small">LDM reduces particle count & detail for performance. Sound is disabled by default (you asked for no audio).</div>
     </div>
 
     <footer class="footer">Made with Three.js • Your OC-inspired gradient glass cube — <strong>bluxli</strong></footer>
